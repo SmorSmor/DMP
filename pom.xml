@@ -77,11 +77,7 @@
             <artifactId>spark-streaming-kafka-0-10_2.11</artifactId>
             <version>${spark.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.1.41</version>
-        </dependency>
+
 
 
     </dependencies>
