@@ -46,7 +46,7 @@ object proCity {
     // 生成df
     val resDF: DataFrame = spark.createDataFrame(res.map(x => Row(x._1._1, x._1._2, x._2)), schema)
 
-    // sql操作
+    // spark sql操作
     df
       .select("provincename", "cityname")
       .createOrReplaceTempView("procity")
@@ -64,10 +64,10 @@ object proCity {
 
     // 存储到数据库
 
-    resDF.write.mode("append").jdbc(url, load.getString("jdbc.tablename"), prop)
+    //    resDF.write.mode("append").jdbc(url, load.getString("jdbc.tablename"), prop)
 
     // 分区存储到本地
-    //    resDF.write.partitionBy("provincename").format("json").save("D:\\out-0820-02")
+        resDF.coalesce(1).write.partitionBy("provincename").format("json").save("D:\\out-0820-02")
     //    resDF.write.partitionBy("provincename").format("json").save("hdfs://hadoop02:9000/out-0820")
 
 
