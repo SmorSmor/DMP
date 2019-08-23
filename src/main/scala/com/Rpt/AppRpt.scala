@@ -34,7 +34,8 @@ object AppRpt {
     val appMap: Map[String, String] = sc.textFile("C:\\Users\\孙洪斌\\Desktop\\Spark用户画像分析\\app_dict.txt")
       .map(_.split("\t", -1))
       .map(arr => (arr(4), arr(1)))
-      .collect().toMap
+      .collect()
+      .toMap
 
     // 将appMap作为广播变量
     val appInfo: Broadcast[Map[String, String]] = sc.broadcast(appMap)
