@@ -5,6 +5,9 @@ import java.util.LinkedList
 
 import com.typesafe.config.{Config, ConfigFactory}
 
+/**
+  * 自定义数据库连接池
+  */
 object DBConnectionPool {
   private val config = ConfigFactory.load("jdbcPool.properties")
   private val max_connection = config.getString("jdbc.max_connection") //连接池总数
@@ -15,6 +18,7 @@ object DBConnectionPool {
   private val url = config.getString("jdbc.url")
   private val username = config.getString("jdbc.username")
   private val password = config.getString("jdbc.password")
+
   /**
     * 加载驱动
     */

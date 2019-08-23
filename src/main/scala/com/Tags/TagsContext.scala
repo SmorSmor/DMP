@@ -1,9 +1,10 @@
 package com.Tags
 
-import com.utils.TagUtils
+import com.utils.{RedisPoolUtils, TagUtils}
 import org.apache.spark.broadcast.Broadcast
 import org.apache.spark.sql.{DataFrame, SparkSession}
 import org.apache.spark.{SparkConf, SparkContext}
+import redis.clients.jedis.Jedis
 
 object TagsContext {
 
@@ -52,6 +53,19 @@ object TagsContext {
 
     // 读取数据
     val df: DataFrame = spark.read.parquet(inputPath)
+
+    // 使用redis存储的字典集来实现指标
+    //    df.foreachPartition(df=>{
+    //      val jedis: Jedis = RedisPoolUtils.getRedis()
+    //
+    //      df.map(row=>{
+    //        val keywordsList2: List[(String, Int)] = TagsApp_redis.makeTags(row, jedis)
+    //        keywordsList2
+    //      }).foreach(println)
+    //
+    //      jedis.close()
+    //
+    //    })
 
     df.filter(TagUtils.OneUserId)
       // 所有标签都在内部实现

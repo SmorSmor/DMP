@@ -23,15 +23,6 @@ object TagsKeywords extends Tag {
         list :+= ("K" + word, 1)
       })
 
-    //    if (key.size <= 8 && key.size >= 3) {
-    //      for (k <- key) {
-    //        list :+= ("K" + k, 1)
-    //      }
-    //    }
-    //    else {
-    //      list :+= ("K" + keywords, 1)
-    //    }
-
     list
   }
 }
