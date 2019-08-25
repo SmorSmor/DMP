@@ -2,10 +2,12 @@ package com.Tags
 
 import com.utils.{RedisPoolUtils, TagUtils}
 import org.apache.spark.broadcast.Broadcast
+import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.{DataFrame, SparkSession}
 import org.apache.spark.{SparkConf, SparkContext}
+import redis.clients.jedis.Jedis
 
-object TagsContext {
+object TagsContext_2 {
 
   def main(args: Array[String]): Unit = {
     // 判断路径是否正确
@@ -48,56 +50,42 @@ object TagsContext {
 
     val stopInfo: Broadcast[Array[String]] = sc.broadcast(stopMap)
 
-    import spark.implicits._
 
-    // 读取数据
+    // 读取数据D:\out-0820-01-less 0 C:\Users\孙洪斌\Desktop\Spark用户画像分析\app_dict.txt C:\Users\孙洪斌\Desktop\Spark用户画像分析\stopwords.txt
     val df: DataFrame = spark.read.parquet(inputPath)
 
     // 使用redis存储的字典集来实现指标
-    //    df.foreachPartition(df=>{
-    //      val jedis: Jedis = RedisPoolUtils.getRedis()
-    //
-    //      df.map(row=>{
-    //        val keywordsList2: List[(String, Int)] = TagsApp_redis.makeTags(row, jedis)
-    //        keywordsList2
-    //      }).foreach(println)
-    //
-    //      jedis.close()
-    //
-    //    })
-
     df.filter(TagUtils.OneUserId)
-      // 所有标签都在内部实现
-      .map(row => {
-      // 取出用户id
-      val userId = TagUtils.getOneUserId(row)
+      .rdd
+      .mapPartitions(rdd => {
+        val jedis: Jedis = RedisPoolUtils.getRedis()
 
-      val adList: List[(String, Int)] = TagsAD.makeTags(row)
+        try {
+          rdd.map(row => {
 
-      val appList: List[(String, Int)] = TagsApp.makeTags(row, appInfo.value)
+            val userId = TagUtils.getOneUserId(row)
+            (
+              userId,
+              TagsAD.makeTags(row) ++
+                TagsApp_redis.makeTags(row, jedis) ++
+                TagsChannel.makeTags(row) ++
+                TagsDevice.makeTags(row) ++
+                TagsKeywords.makeTags(row, stopInfo.value) ++
+                TagsProAndCity.makeTags(row)
+            )
 
-      val channelList: List[(String, Int)] = TagsChannel.makeTags(row)
-
-      val deviceList: List[(String, Int)] = TagsDevice.makeTags(row)
-
-      val keywordsList: List[(String, Int)] = TagsKeywords.makeTags(row, stopInfo.value)
-
-      val proAndCityList: List[(String, Int)] = TagsProAndCity.makeTags(row)
-
-      val businessList: List[(String, Int)] = TagsBusiness.makeTags(row)
-
-      //通过row数据打上所有标签
-      (userId, adList ++ appList ++ channelList ++ deviceList ++ keywordsList ++ proAndCityList ++ businessList)
-      //      (userId, adList, appList, channelList, deviceList, keywordsList, proAndCityList)
-
-    }).rdd.reduceByKey((list1, list2) => {
-      (list1 ::: list2)
+          })
+        } finally {
+          jedis.close()
+        }
+      }).reduceByKey((list1, list2) => {
+      list1 ::: list2
         .groupBy(_._1)
         .mapValues(_.foldLeft[Int](0)(_ + _._2))
         .toList
-    })
-      .collect()
+    }).collect()
       .foreach(println)
+
 
     sc.stop()
     spark.stop()

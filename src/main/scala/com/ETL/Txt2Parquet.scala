@@ -130,7 +130,7 @@ object Txt2Parquet {
     // 构建DF
     val df = sQLContext.createDataFrame(rowRDD, SchemaUtils.structtype)
     // 保存数据
-    df.write.parquet(outputPath)
+//    df.write.parquet(outputPath)
 
     val load: Config = ConfigFactory.load()
     // 获取数据库链接信息
@@ -141,7 +141,7 @@ object Txt2Parquet {
 
     // 存储到数据库
 
-    //    df.write.mode("append").jdbc(url, load.getString("jdbc.tablename"), prop)
+        df.write.mode("append").jdbc(url,"selected", prop)
     sc.stop()
 
   }

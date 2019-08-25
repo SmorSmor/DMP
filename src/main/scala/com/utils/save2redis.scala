@@ -1,8 +1,7 @@
-package com.test00
+package com.utils
 
-import com.utils.RedisPoolUtils
 import org.apache.spark.{SparkConf, SparkContext}
-import redis.clients.jedis.{Jedis, JedisPool}
+import redis.clients.jedis.Jedis
 
 /**
   * 将字典集KEY、VALUE写入redis
@@ -22,7 +21,7 @@ object save2redis {
       .foreachPartition(rdd => {
 
         val jedis: Jedis = RedisPoolUtils.getRedis()
-        val unit: Unit = rdd.foreach(str => {
+        rdd.foreach(str => {
           val arr: Array[String] = str.split("\t", -1)
           jedis.set(arr(4), arr(1))
         })
