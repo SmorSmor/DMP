@@ -24,7 +24,7 @@ object TagsContext {
     }
 
     // 创建一个集合保存输入和输出目录
-    val Array(inputPath, outputPath, dirPath, stopPath,day) = args
+    val Array(inputPath, outputPath, dirPath, stopPath, day) = args
 
     val conf = new SparkConf()
       .setAppName(this.getClass.getName)
@@ -75,7 +75,7 @@ object TagsContext {
     //
     //    })
 
-    // todo 调用hbase API
+    //  调用hbase API
     val load: Config = ConfigFactory.load()
     val hbaseConf: Configuration = HBaseConfiguration.create()
 
@@ -157,7 +157,7 @@ object TagsContext {
       case (userId, userTags) => {
         val put = new Put(Bytes.toBytes(userId))
         val tags = userTags.map(t => t._1 + ":" + t._2).mkString(",")
-        put.addImmutable(Bytes.toBytes("tags"),Bytes.toBytes(s"${day}"),Bytes.toBytes(tags))
+        put.addImmutable(Bytes.toBytes("tags"), Bytes.toBytes(s"${day}"), Bytes.toBytes(tags))
 
         (new ImmutableBytesWritable(), put)
       }
