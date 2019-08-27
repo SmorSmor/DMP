@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54c29715-50c0-4736-93d5-e01965839875" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/Tags/TagsCommon.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/Tags/TagsContext_3.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/utils/UuidUtils.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/test00/JedisConnectionPool.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/test00/JedisOffset.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/test00/KafkaRedisOffset.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/Graphx/Graphx_test.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/Graphx/Graphx_test.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/Tags/TagsBusiness_2.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/Tags/TagsBusiness_2.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/Tags/TagsContext.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/Tags/TagsContext.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/Tags/TagsContext_2.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/Tags/TagsContext_2.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/exam01/JsonUtils.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/exam01/Test01.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/utils/UuidUtils.scala" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,22 +24,40 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/SparkStreaming-kafka/MockRealTimeData.java">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/test00/JedisConnectionPool.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+            <state relative-caret-position="360">
+              <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/test00/JedisOffset.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="466">
+              <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+              <folding>
+                <element signature="e#20#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/test00/KafkaRedisOffset.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="58" column="18" lean-forward="true" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/SparkStreaming-kafka/AdClickRealTimeStatSpark.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/SparkStreaming-kafka/MockRealTimeData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-              <folding>
-                <element signature="e#0#33#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="270">
+              <caret line="27" column="50" lean-forward="true" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -95,8 +111,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/scala/com/test00/Test01.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/utils/RptUtils2.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/Rpt/OperatorRpt.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/jdbcPool/Pool.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/test00/ttttttttt.scala" />
@@ -146,6 +160,8 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/Graphx/Graphx_test.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/Tags/TagsContext_3.scala" />
         <option value="$PROJECT_DIR$/src/main/SparkStreaming-kafka/AdClickRealTimeStatSpark.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/test00/JedisConnectionPool.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/test00/KafkaRedisOffset.scala" />
       </list>
     </option>
   </component>
@@ -247,7 +263,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/scala/com/test00" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -258,6 +274,7 @@
       <recent name="com.utils" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\DMP\src\main\scala\com\test00" />
       <recent name="D:\DMP\src\main\resources" />
       <recent name="D:\DMP\src\main\SparkStreaming-kafka" />
     </key>
@@ -274,7 +291,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MockRealTimeData">
+  <component name="RunManager" selected="Application.KafkaRedisOffset">
     <configuration name="AdClickRealTimeStatSpark" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="AdClickRealTimeStatSpark" />
       <module name="DMP" />
@@ -288,6 +305,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.Graphx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KafkaRedisOffset" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.test00.KafkaRedisOffset" />
+      <module name="DMP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test00.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -352,36 +382,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test000" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.test00.test000" />
-      <module name="DMP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.test00.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Txt2Parquet" />
       <item itemvalue="Application.TagsContext" />
       <item itemvalue="Application.TagsContext_2" />
       <item itemvalue="Application.TagsContext_3" />
-      <item itemvalue="Application.test000" />
       <item itemvalue="Application.Graphx_test" />
       <item itemvalue="Application.AdClickRealTimeStatSpark" />
       <item itemvalue="Application.MockRealTimeData" />
+      <item itemvalue="Application.KafkaRedisOffset" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.MockRealTimeData" />
+        <item itemvalue="Application.KafkaRedisOffset" />
         <item itemvalue="Application.AdClickRealTimeStatSpark" />
         <item itemvalue="Application.TagsContext_3" />
         <item itemvalue="Application.Graphx_test" />
-        <item itemvalue="Application.test000" />
       </list>
     </recent_temporary>
   </component>
@@ -529,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566810953448</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="190827代码1">
+      <created>1566894718073</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1566894718073</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -545,7 +569,7 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.36134455" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.51960784" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.35434175" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.39944133" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -562,6 +586,34 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Structure" order="0" sideWeight="0.50110865" side_tool="true" weight="0.26407507" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.49889135" visible="true" weight="0.32147652" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.36134455" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.35434175" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.39944133" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32960895" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32960895" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.33489934" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="day01" />
@@ -580,7 +632,8 @@
     <MESSAGE value="day05代码2" />
     <MESSAGE value="day06代码1" />
     <MESSAGE value="190826代码1" />
-    <option name="LAST_COMMIT_MESSAGE" value="190826代码1" />
+    <MESSAGE value="190827代码1" />
+    <option name="LAST_COMMIT_MESSAGE" value="190827代码1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -599,24 +652,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/Spark-redis/MyRedisPool.scala" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.11/2.2.0/spark-core_2.11-2.2.0.jar!/org/apache/spark/util/ClosureCleaner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/Rpt/AppRpt.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-          <folding>
-            <element signature="e#17#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/SparkStreaming-kafka/DateUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -823,13 +858,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/utils/AmapUtil.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hbase/hbase-client/1.1.1/hbase-client-1.1.1.jar!/org/apache/hadoop/hbase/client/HBaseAdmin.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -858,16 +886,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="72" column="66" lean-forward="true" selection-start-line="72" selection-start-column="66" selection-end-line="72" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/test00/test000.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
-          <folding>
-            <element signature="e#20#63#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -934,13 +952,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2754">
-          <caret line="153" column="37" selection-start-line="153" selection-start-column="37" selection-end-line="153" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/Graphx/Graphx_test.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="376">
@@ -978,20 +989,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/SparkStreaming-kafka/MockRealTimeData.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+        <state relative-caret-position="400">
+          <caret line="139" column="58" lean-forward="true" selection-start-line="139" selection-start-column="58" selection-end-line="139" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/SparkStreaming-kafka/AdClickRealTimeStatSpark.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+        <state relative-caret-position="180">
+          <caret line="10" column="72" lean-forward="true" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/test00/test000.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+          <folding>
+            <element signature="e#20#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/utils/AmapUtil.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/test00/JedisConnectionPool.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/test00/JedisOffset.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+          <folding>
+            <element signature="e#20#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/test00/KafkaRedisOffset.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="58" column="18" lean-forward="true" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/SparkStreaming-kafka/MockRealTimeData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="27" column="50" lean-forward="true" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
         </state>
       </provider>
     </entry>
