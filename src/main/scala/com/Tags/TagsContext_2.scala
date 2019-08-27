@@ -71,7 +71,8 @@ object TagsContext_2 {
                 TagsChannel.makeTags(row) ++
                 TagsDevice.makeTags(row) ++
                 TagsKeywords.makeTags(row, stopInfo.value) ++
-                TagsProAndCity.makeTags(row)
+                TagsProAndCity.makeTags(row)++
+              TagsBusiness_2.makeTags(row)
             )
 
           })

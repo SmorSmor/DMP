@@ -1,6 +1,7 @@
 package com.Graphx
 
-import org.apache.spark.graphx.{Edge, Graph}
+import org.apache.spark.graphx.{Edge, Graph, VertexId}
+import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
 
 object Graphx_test {
@@ -39,8 +40,9 @@ object Graphx_test {
     val graph = Graph(vertexRdd, edge)
 
     val vertices = graph.connectedComponents().vertices
-    vertices.foreach(println)
-    vertices.join(vertexRdd).map {
+    val value: RDD[(VertexId, (VertexId, (String, Int)))] = vertices.join(vertexRdd)
+    value
+      .map {
       case (userId, (conId, (name, age))) => {
         (conId, List(name, age))
       }

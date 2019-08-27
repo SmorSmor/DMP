@@ -79,7 +79,7 @@ object TagsContext {
     val load: Config = ConfigFactory.load()
     val hbaseConf: Configuration = HBaseConfiguration.create()
 
-    hbaseConf.set("hbase.zookeeper.quorum", load.getString("host.name"))
+    hbaseConf.set("hbase.zookeeper.quorum", "hadoop01,hadoop02,hadoop03")
 
     val connection: Connection = ConnectionFactory.createConnection(hbaseConf)
 
@@ -123,17 +123,11 @@ object TagsContext {
       .map(row => {
       // 取出用户id
       val userId = TagUtils.getOneUserId(row)
-
       val adList: List[(String, Int)] = TagsAD.makeTags(row)
-
       val appList: List[(String, Int)] = TagsApp.makeTags(row, appInfo.value)
-
       val channelList: List[(String, Int)] = TagsChannel.makeTags(row)
-
       val deviceList: List[(String, Int)] = TagsDevice.makeTags(row)
-
       val keywordsList: List[(String, Int)] = TagsKeywords.makeTags(row, stopInfo.value)
-
       val proAndCityList: List[(String, Int)] = TagsProAndCity.makeTags(row)
 
       //      val businessList: List[(String, Int)] = TagsBusiness.makeTags(row)
